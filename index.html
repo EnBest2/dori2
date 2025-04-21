@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szabadság Rendszerező</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Szabadság Rendszerező</h1>
+    </header>
+    
+    <!-- Szabadság napok számláló -->
+    <section id="vacation-counter">
+      <h2>Szabadság Napok Számláló</h2>
+      <div class="counter-input">
+        <label for="totalDays">Összes szabadságnap:</label>
+        <input type="number" id="totalDays" value="25" min="0">
+        <button id="saveTotal">Mentés</button>
+      </div>
+      <div class="counter-display">
+        <p>Összes nap: <span id="displayTotal">25</span></p>
+        <p>Maradék nap: <span id="displayRemaining">25</span></p>
+      </div>
+    </section>
+    
+    <!-- Új szabadság hozzáadása -->
+    <section id="vacation-form">
+      <h2>Új szabadság hozzáadása</h2>
+      <form id="addVacationForm">
+        <div class="form-group">
+          <label for="vacationDate">Dátum:</label>
+          <input type="date" id="vacationDate" required>
+        </div>
+        <button type="submit">Hozzáad</button>
+      </form>
+    </section>
+    
+    <!-- Szabadságok listája -->
+    <section id="vacation-list-section">
+      <h2>Szabadságok listája</h2>
+      <ul id="vacationList"></ul>
+    </section>
+    
+    <!-- Havi összegzés -->
+    <section id="monthly-summary">
+      <h2>Havi Összegzés</h2>
+      <div id="summaryContainer"></div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
